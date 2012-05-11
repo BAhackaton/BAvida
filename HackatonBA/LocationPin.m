@@ -29,7 +29,7 @@
 
 #pragma mark - MKAnnotation
 -(NSString *)title{
-    NSString *retVal = @"You're HERE";
+    NSString *retVal = title;
     return retVal;
 }
 
@@ -39,7 +39,7 @@
 }
 
 -(CLLocationCoordinate2D)coordinate{
-    CLLocationCoordinate2D retVal = CLLocationCoordinate2DMake(-34.655016, -58.379790);
+    CLLocationCoordinate2D retVal = coordinate;
     return retVal;
 }
 
