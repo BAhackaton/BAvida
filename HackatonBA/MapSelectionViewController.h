@@ -11,11 +11,14 @@
 #import "LocationManager.h"
 #import "LocationManagerDelegateProtocol.h"
 #import "LocationPin.h"
+#import "LoadingScreenView.h"
+#import "ServerAPIDelegateProtocol.h"
 
-@interface MapSelectionViewController : UIViewController <MKMapViewDelegate, LocationManagerDelegateProtocol>{
+@interface MapSelectionViewController : UIViewController <MKMapViewDelegate, LocationManagerDelegateProtocol, ServerAPIDelegateProtocol>{
     IBOutlet MKMapView *mapView;
     LocationPin *selectionPin;
     LocationPin *currentLocationPin;
+    LoadingScreenView *loadingView;
 }
 
 @end

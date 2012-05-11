@@ -32,6 +32,8 @@
 		670DF990155D627100FD2D0B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF98F155D627100FD2D0B /* SystemConfiguration.framework */; };
 		670DF992155D628900FD2D0B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF991155D628900FD2D0B /* MobileCoreServices.framework */; };
 		670DF994155D62C700FD2D0B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF993155D62C700FD2D0B /* libz.dylib */; };
+		6757000F155DB53C00A63567 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6757000E155DB53C00A63567 /* JSONKit.m */; };
+		67570014155DB93200A63567 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 67570013155DB93200A63567 /* response.json */; };
 		67FEA13D155D6B0A00218F75 /* MapSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA13B155D6B0A00218F75 /* MapSelectionViewController.m */; };
 		67FEA13E155D6B0A00218F75 /* MapSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FEA13C155D6B0A00218F75 /* MapSelectionViewController.xib */; };
 		67FEA141155D76F900218F75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FEA140155D76F900218F75 /* MapKit.framework */; };
@@ -87,6 +89,9 @@
 		670DF98F155D627100FD2D0B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		670DF991155D628900FD2D0B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		670DF993155D62C700FD2D0B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6757000D155DB53C00A63567 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = libs/JSONKit/JSONKit.h; sourceTree = "<group>"; };
+		6757000E155DB53C00A63567 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = libs/JSONKit/JSONKit.m; sourceTree = "<group>"; };
+		67570013155DB93200A63567 /* response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = response.json; path = Resourses/response.json; sourceTree = "<group>"; };
 		67FEA13A155D6B0A00218F75 /* MapSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSelectionViewController.h; sourceTree = "<group>"; };
 		67FEA13B155D6B0A00218F75 /* MapSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSelectionViewController.m; sourceTree = "<group>"; };
 		67FEA13C155D6B0A00218F75 /* MapSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSelectionViewController.xib; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 		67FEA147155D909C00218F75 /* LocationPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPin.m; sourceTree = "<group>"; };
 		67FEA151155D9F7E00218F75 /* LoadingScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreenView.h; sourceTree = "<group>"; };
 		67FEA152155D9F7E00218F75 /* LoadingScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScreenView.m; sourceTree = "<group>"; };
+		67FEA158155DB1E700218F75 /* ServerAPIDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerAPIDelegateProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 				670DF94B155D483D00FD2D0B /* AppDelegate.h */,
 				670DF94C155D483D00FD2D0B /* AppDelegate.m */,
 				670DF96A155D514700FD2D0B /* SynthesizeSingleton.h */,
+				67570012155DB92000A63567 /* Resources */,
 				67FEA151155D9F7E00218F75 /* LoadingScreenView.h */,
 				67FEA152155D9F7E00218F75 /* LoadingScreenView.m */,
 				670DF943155D483D00FD2D0B /* Supporting Files */,
@@ -202,6 +209,7 @@
 			children = (
 				670DF95E155D4E1600FD2D0B /* ServerAPIManager.h */,
 				670DF95F155D4E1600FD2D0B /* ServerAPIManager.m */,
+				67FEA158155DB1E700218F75 /* ServerAPIDelegateProtocol.h */,
 				67FEA142155D7C8300218F75 /* LocationManager.h */,
 				67FEA143155D7C8300218F75 /* LocationManager.m */,
 				67FEA145155D7F9000218F75 /* LocationManagerDelegateProtocol.h */,
@@ -212,6 +220,7 @@
 		670DF96B155D5CFB00FD2D0B /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				6757000B155DB52E00A63567 /* JSONKit */,
 				670DF96D155D5D1600FD2D0B /* ASIHTTPRequest */,
 			);
 			name = libs;
@@ -245,6 +254,23 @@
 			);
 			name = ASIHTTPRequest;
 			path = libs/ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		6757000B155DB52E00A63567 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				6757000D155DB53C00A63567 /* JSONKit.h */,
+				6757000E155DB53C00A63567 /* JSONKit.m */,
+			);
+			name = JSONKit;
+			sourceTree = "<group>";
+		};
+		67570012155DB92000A63567 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67570013155DB93200A63567 /* response.json */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		67FEA149155D93BF00218F75 /* Entities */ = {
@@ -310,6 +336,7 @@
 				670DF953155D483D00FD2D0B /* ViewController.xib in Resources */,
 				670DF95D155D49BE00FD2D0B /* ResultViewController.xib in Resources */,
 				67FEA13E155D6B0A00218F75 /* MapSelectionViewController.xib in Resources */,
+				67570014155DB93200A63567 /* response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +365,7 @@
 				67FEA144155D7C8300218F75 /* LocationManager.m in Sources */,
 				67FEA148155D909C00218F75 /* LocationPin.m in Sources */,
 				67FEA153155D9F7E00218F75 /* LoadingScreenView.m in Sources */,
+				6757000F155DB53C00A63567 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

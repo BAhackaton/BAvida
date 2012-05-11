@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ResultViewController : UIViewController
+@interface ResultViewController : UIViewController{
+    NSDictionary *categories;
+}
+
+- (id)initWithStringResponse:(NSString *)aResponse;
 
 @end

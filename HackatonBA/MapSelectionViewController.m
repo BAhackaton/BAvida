@@ -7,7 +7,8 @@
 //
 
 #import "MapSelectionViewController.h"
-#import "LoadingScreenView.h"
+#import "ServerAPIManager.h"
+#import "ResultViewController.h"
 
 @interface MapSelectionViewController ()
 
@@ -36,8 +37,9 @@
             coordinatesToQuery = currentLocationPin.coordinate;
         }
         
-        LoadingScreenView *loadingView = [[LoadingScreenView alloc] init];
+        loadingView = [[LoadingScreenView alloc] init];
         [self.view addSubview:loadingView];
+        [[ServerAPIManager sharedInstance] queryPointsWithLocationCoordinate:coordinatesToQuery];
     }
 }
 
@@ -80,6 +82,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [ServerAPIManager sharedInstance].delegate = self;
         [LocationManager sharedInstance].delegate = self;
         [[LocationManager sharedInstance] locate];
     }
@@ -133,5 +136,20 @@
 -(void) locationError:(NSError *)error{
     //  #TODO Implement this
 }
+
+#pragma mark - ServerAPIDelegateProtocol
+-(void)requestFinished:(ASIHTTPRequest *)request{
+    [loadingView stop];
+    ResultViewController *aView = [[[ResultViewController alloc] init] autorelease];    
+    [self.navigationController pushViewController:aView animated:YES];
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request{
+    [loadingView stop];
+    //  #TODO Change this
+    ResultViewController *aView = [[[ResultViewController alloc] initWithStringResponse:nil] autorelease];    
+    [self.navigationController pushViewController:aView animated:YES];    
+}
+
 
 @end

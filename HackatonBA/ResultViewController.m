@@ -7,19 +7,22 @@
 //
 
 #import "ResultViewController.h"
-
-@interface ResultViewController ()
-
-@end
+#import "JSONKit.h"
 
 @implementation ResultViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+- (id)initWithStringResponse:(NSString *)aResponse{
+    self = [super init];
+    if (self){
+        if (!aResponse){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"response" ofType:@"json"];
+            NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
+            categories = [[jsonData objectFromJSONData] retain];
+        }else{
+            //  #TODO Implement this
+        }
     }
+    
     return self;
 }
 

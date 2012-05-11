@@ -11,12 +11,15 @@
 #import <CoreLocation/CoreLocation.h>
 #import "LocationManagerDelegateProtocol.h"
 #import "LocationManager.h"
+#import "ServerAPIDelegateProtocol.h"
 @interface ServerAPIManager : NSObject<LocationManagerDelegateProtocol>{
-
+    id <ServerAPIDelegateProtocol> delegate;
 }
 
 SYNTHESIZE_SINGLETON_INTERFACE_FOR_CLASS(ServerAPIManager)
 
 -(void)queryPointsWithCurrentLocation;
--(void)queryPointsWithLocation:(CLLocation *)aLocation;
+-(void)queryPointsWithLocationCoordinate:(CLLocationCoordinate2D)aLocation;
+
+@property (assign) id <ServerAPIDelegateProtocol> delegate;
 @end
