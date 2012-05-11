@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "SynthesizeSingleton.h"
 #import <CoreLocation/CoreLocation.h>
+#import "LocationManagerDelegateProtocol.h"
+#import "LocationManager.h"
+@interface ServerAPIManager : NSObject<LocationManagerDelegateProtocol>{
 
-@interface ServerAPIManager : NSObject <CLLocationManagerDelegate>{
-    CLLocationManager *locationManager;
-    CLLocation *currentLocation;
 }
 
 SYNTHESIZE_SINGLETON_INTERFACE_FOR_CLASS(ServerAPIManager)

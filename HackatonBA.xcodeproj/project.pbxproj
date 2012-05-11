@@ -35,6 +35,7 @@
 		67FEA13D155D6B0A00218F75 /* MapSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA13B155D6B0A00218F75 /* MapSelectionViewController.m */; };
 		67FEA13E155D6B0A00218F75 /* MapSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FEA13C155D6B0A00218F75 /* MapSelectionViewController.xib */; };
 		67FEA141155D76F900218F75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FEA140155D76F900218F75 /* MapKit.framework */; };
+		67FEA144155D7C8300218F75 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA143155D7C8300218F75 /* LocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +58,6 @@
 		670DF95E155D4E1600FD2D0B /* ServerAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIManager.h; sourceTree = "<group>"; };
 		670DF95F155D4E1600FD2D0B /* ServerAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerAPIManager.m; sourceTree = "<group>"; };
 		670DF963155D4F4F00FD2D0B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		670DF965155D503400FD2D0B /* CoreLocationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreLocationProtocol.h; sourceTree = "<group>"; };
 		670DF96A155D514700FD2D0B /* SynthesizeSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		670DF96E155D5D1600FD2D0B /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		670DF96F155D5D1600FD2D0B /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
@@ -89,6 +89,9 @@
 		67FEA13B155D6B0A00218F75 /* MapSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSelectionViewController.m; sourceTree = "<group>"; };
 		67FEA13C155D6B0A00218F75 /* MapSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSelectionViewController.xib; sourceTree = "<group>"; };
 		67FEA140155D76F900218F75 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		67FEA142155D7C8300218F75 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		67FEA143155D7C8300218F75 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		67FEA145155D7F9000218F75 /* LocationManagerDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManagerDelegateProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +154,6 @@
 				670DF962155D4F0300FD2D0B /* Model */,
 				670DF961155D4EF700FD2D0B /* Controller */,
 				670DF94B155D483D00FD2D0B /* AppDelegate.h */,
-				670DF965155D503400FD2D0B /* CoreLocationProtocol.h */,
 				670DF94C155D483D00FD2D0B /* AppDelegate.m */,
 				670DF96A155D514700FD2D0B /* SynthesizeSingleton.h */,
 				670DF943155D483D00FD2D0B /* Supporting Files */,
@@ -191,6 +193,9 @@
 			children = (
 				670DF95E155D4E1600FD2D0B /* ServerAPIManager.h */,
 				670DF95F155D4E1600FD2D0B /* ServerAPIManager.m */,
+				67FEA142155D7C8300218F75 /* LocationManager.h */,
+				67FEA143155D7C8300218F75 /* LocationManager.m */,
+				67FEA145155D7F9000218F75 /* LocationManagerDelegateProtocol.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				670DF98B155D5D1600FD2D0B /* ASINetworkQueue.m in Sources */,
 				670DF98C155D5D1600FD2D0B /* Reachability.m in Sources */,
 				67FEA13D155D6B0A00218F75 /* MapSelectionViewController.m in Sources */,
+				67FEA144155D7C8300218F75 /* LocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

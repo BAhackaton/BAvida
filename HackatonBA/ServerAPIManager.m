@@ -18,24 +18,18 @@ SYNTHESIZE_SINGLETON_IMPLEMENTATION_FOR_CLASS(ServerAPIManager)
 -(id)init{
     self = [super init];
     if (self){
-        locationManager = [[CLLocationManager alloc] init];
-        locationManager.delegate = self;
+        [LocationManager sharedInstance].delegate = self;
     }
     return self;
 }
 
 -(void)queryPointsWithCurrentLocation{
-    /*  
-     *  This will eventually call 
-     *  locationManager:didUpdateToLocation:fromLocation
-     *  and after that we'll be able to ask to our server
-     *  about our points
-     */
-    
-    [locationManager startUpdatingLocation];
+    [[LocationManager sharedInstance] locate];
 }
 
 -(void)queryPointsWithLocation:(CLLocation *)aLocation{
+    CLLocation *currentLocation = [LocationManager sharedInstance].currentLocation;
+    
     if (currentLocation.coordinate.latitude == aLocation.coordinate.latitude &&
         currentLocation.coordinate.longitude == aLocation.coordinate.longitude){
         
@@ -56,13 +50,17 @@ SYNTHESIZE_SINGLETON_IMPLEMENTATION_FOR_CLASS(ServerAPIManager)
     }
 }
 
-#pragma mark - CLLocationManagerDelegate
-- (void)locationManager:(CLLocationManager *)manager
-	didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation{
-    
-    [self queryPointsWithLocation:newLocation];
-    [locationManager stopUpdatingLocation];
+-(void) dealloc{
+    [super dealloc];
+}
+
+#pragma mark - LocationManagerDelegateProtocol
+-(void) locationUpdate:(CLLocation *)aLocation{
+    [self queryPointsWithLocation:aLocation];
+}
+
+- (void)locationError:(NSError *)error{
+    //  #TODO Implement this
 }
 
 @end

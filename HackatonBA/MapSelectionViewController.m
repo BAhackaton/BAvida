@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        mapView.showsUserLocation = YES;
     }
     return self;
 }
@@ -31,8 +32,8 @@
 
 - (void)viewDidUnload
 {
-//    [mapView release];
-//    mapView = nil;
+    [mapView release];
+    mapView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -44,7 +45,7 @@
 }
 
 - (void)dealloc {
-//    [mapView release];
+    [mapView release];
     [super dealloc];
 }
 @end
