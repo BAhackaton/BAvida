@@ -7,7 +7,6 @@
 //
 
 #import "MapSelectionViewController.h"
-#import "LocationPin.h"
 
 @interface MapSelectionViewController ()
 
@@ -17,8 +16,27 @@
 
 #pragma mark - Private
 
--(void)zoomMapView{
+- (void)addSelectionPinWithCoordinate:(CLLocationCoordinate2D)aCoordinate{
+    selectionPin = [[LocationPin alloc] initWithTitle:@"Selección" withCoordinate:aCoordinate];
+    [mapView addAnnotation:selectionPin];
+    [selectionPin release]; 
+}
 
+- (void)removeSelectionPin{
+    if (selectionPin != nil){
+        [mapView removeAnnotation:selectionPin];
+        selectionPin = nil;        
+    }    
+}
+
+- (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer{
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan){
+        [self removeSelectionPin];
+         
+        CGPoint touchPoint = [gestureRecognizer locationInView:mapView];   
+        CLLocationCoordinate2D touchMapCoordinate = [mapView convertPoint:touchPoint toCoordinateFromView:mapView];
+        [self addSelectionPinWithCoordinate:touchMapCoordinate];
+    }
 }
 
 #pragma mark - Public
@@ -37,7 +55,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    //  Long Touch gesture recognizer
+    UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] 
+                                                       initWithTarget:self action:@selector(handleLongPress:)];
+    gestureRecognizer.minimumPressDuration = 2.0;
+    [mapView addGestureRecognizer:gestureRecognizer];
+    [gestureRecognizer release];    
 }
 
 - (void)viewDidUnload
@@ -61,9 +85,9 @@
 
 #pragma mark - LocationManagerDelegateProtocol
 -(void) locationUpdate:(CLLocation *)location{
-    LocationPin *locationPin = [[[LocationPin alloc] initWithTitle:@"VOS" 
+    currentLocationPin = [[[LocationPin alloc] initWithTitle:@"VOS" 
                                                     withCoordinate:location.coordinate] autorelease];
-    [mapView addAnnotation:locationPin];
+    [mapView addAnnotation:currentLocationPin];
     
     MKCoordinateSpan aCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005);
     MKCoordinateRegion aCoordinateRegion = MKCoordinateRegionMake(location.coordinate, aCoordinateSpan);

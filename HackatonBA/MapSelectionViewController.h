@@ -10,9 +10,12 @@
 #import <MapKit/Mapkit.h>
 #import "LocationManager.h"
 #import "LocationManagerDelegateProtocol.h"
+#import "LocationPin.h"
 
 @interface MapSelectionViewController : UIViewController <MKMapViewDelegate, LocationManagerDelegateProtocol>{
     IBOutlet MKMapView *mapView;
+    LocationPin *selectionPin;
+    LocationPin *currentLocationPin;
 }
 
 @end
