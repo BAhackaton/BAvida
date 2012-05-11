@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
-@interface MapSelectionViewController : UIViewController{
+#import "LocationManager.h"
+#import "LocationManagerDelegateProtocol.h"
+
+@interface MapSelectionViewController : UIViewController <MKMapViewDelegate, LocationManagerDelegateProtocol>{
     IBOutlet MKMapView *mapView;
 }
 

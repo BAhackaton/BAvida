@@ -7,6 +7,7 @@
 //
 
 #import "MapSelectionViewController.h"
+#import "LocationPin.h"
 
 @interface MapSelectionViewController ()
 
@@ -14,12 +15,21 @@
 
 @implementation MapSelectionViewController
 
+#pragma mark - Private
+
+-(void)zoomMapView{
+
+}
+
+#pragma mark - Public
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        mapView.showsUserLocation = YES;
+        [LocationManager sharedInstance].delegate = self;
+        [[LocationManager sharedInstance] locate];
     }
     return self;
 }
@@ -48,4 +58,20 @@
     [mapView release];
     [super dealloc];
 }
+
+#pragma mark - LocationManagerDelegateProtocol
+-(void) locationUpdate:(CLLocation *)location{
+    LocationPin *locationPin = [[[LocationPin alloc] initWithTitle:@"VOS" 
+                                                    withCoordinate:location.coordinate] autorelease];
+    [mapView addAnnotation:locationPin];
+    
+    MKCoordinateSpan aCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005);
+    MKCoordinateRegion aCoordinateRegion = MKCoordinateRegionMake(location.coordinate, aCoordinateSpan);
+    [mapView setRegion:aCoordinateRegion animated:YES];
+}
+
+-(void) locationError:(NSError *)error{
+    //  #TODO Implement this
+}
+
 @end

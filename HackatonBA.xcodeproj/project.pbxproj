@@ -36,6 +36,7 @@
 		67FEA13E155D6B0A00218F75 /* MapSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FEA13C155D6B0A00218F75 /* MapSelectionViewController.xib */; };
 		67FEA141155D76F900218F75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FEA140155D76F900218F75 /* MapKit.framework */; };
 		67FEA144155D7C8300218F75 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA143155D7C8300218F75 /* LocationManager.m */; };
+		67FEA148155D909C00218F75 /* LocationPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA147155D909C00218F75 /* LocationPin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,8 @@
 		67FEA142155D7C8300218F75 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		67FEA143155D7C8300218F75 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		67FEA145155D7F9000218F75 /* LocationManagerDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManagerDelegateProtocol.h; sourceTree = "<group>"; };
+		67FEA146155D909C00218F75 /* LocationPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPin.h; sourceTree = "<group>"; };
+		67FEA147155D909C00218F75 /* LocationPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,7 @@
 		670DF942155D483D00FD2D0B /* HackatonBA */ = {
 			isa = PBXGroup;
 			children = (
+				67FEA149155D93BF00218F75 /* Entities */,
 				670DF96B155D5CFB00FD2D0B /* libs */,
 				670DF962155D4F0300FD2D0B /* Model */,
 				670DF961155D4EF700FD2D0B /* Controller */,
@@ -238,6 +242,15 @@
 			path = libs/ASIHTTPRequest;
 			sourceTree = "<group>";
 		};
+		67FEA149155D93BF00218F75 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				67FEA146155D909C00218F75 /* LocationPin.h */,
+				67FEA147155D909C00218F75 /* LocationPin.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,6 +331,7 @@
 				670DF98C155D5D1600FD2D0B /* Reachability.m in Sources */,
 				67FEA13D155D6B0A00218F75 /* MapSelectionViewController.m in Sources */,
 				67FEA144155D7C8300218F75 /* LocationManager.m in Sources */,
+				67FEA148155D909C00218F75 /* LocationPin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
