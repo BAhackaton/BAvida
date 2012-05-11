@@ -37,6 +37,7 @@
 		67FEA141155D76F900218F75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FEA140155D76F900218F75 /* MapKit.framework */; };
 		67FEA144155D7C8300218F75 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA143155D7C8300218F75 /* LocationManager.m */; };
 		67FEA148155D909C00218F75 /* LocationPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA147155D909C00218F75 /* LocationPin.m */; };
+		67FEA153155D9F7E00218F75 /* LoadingScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA152155D9F7E00218F75 /* LoadingScreenView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,8 @@
 		67FEA145155D7F9000218F75 /* LocationManagerDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManagerDelegateProtocol.h; sourceTree = "<group>"; };
 		67FEA146155D909C00218F75 /* LocationPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPin.h; sourceTree = "<group>"; };
 		67FEA147155D909C00218F75 /* LocationPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPin.m; sourceTree = "<group>"; };
+		67FEA151155D9F7E00218F75 /* LoadingScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreenView.h; sourceTree = "<group>"; };
+		67FEA152155D9F7E00218F75 /* LoadingScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScreenView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				670DF94B155D483D00FD2D0B /* AppDelegate.h */,
 				670DF94C155D483D00FD2D0B /* AppDelegate.m */,
 				670DF96A155D514700FD2D0B /* SynthesizeSingleton.h */,
+				67FEA151155D9F7E00218F75 /* LoadingScreenView.h */,
+				67FEA152155D9F7E00218F75 /* LoadingScreenView.m */,
 				670DF943155D483D00FD2D0B /* Supporting Files */,
 			);
 			path = HackatonBA;
@@ -332,6 +337,7 @@
 				67FEA13D155D6B0A00218F75 /* MapSelectionViewController.m in Sources */,
 				67FEA144155D7C8300218F75 /* LocationManager.m in Sources */,
 				67FEA148155D909C00218F75 /* LocationPin.m in Sources */,
+				67FEA153155D9F7E00218F75 /* LoadingScreenView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

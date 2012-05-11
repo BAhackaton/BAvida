@@ -7,6 +7,7 @@
 //
 
 #import "MapSelectionViewController.h"
+#import "LoadingScreenView.h"
 
 @interface MapSelectionViewController ()
 
@@ -15,6 +16,39 @@
 @implementation MapSelectionViewController
 
 #pragma mark - Private
+- (void)userDoneSelectingCoord{
+    if (!selectionPin && !currentLocationPin){
+        //  Alert error
+        UIAlertView *anAlert = [[UIAlertView alloc] initWithTitle:@"¡Oh no!" 
+                                                          message:@"No hay coordenadas seleccionadas :-(" 
+                                                         delegate:nil 
+                                                cancelButtonTitle:@"Ok" 
+                                                otherButtonTitles:nil];
+        [anAlert show];
+    }else{
+        CLLocationCoordinate2D coordinatesToQuery;
+
+        if (selectionPin){
+            //  Use selected coordinates
+            coordinatesToQuery = selectionPin.coordinate;
+        }else if (currentLocationPin) {
+            //  Use GPS coordinates
+            coordinatesToQuery = currentLocationPin.coordinate;
+        }
+        
+        LoadingScreenView *loadingView = [[LoadingScreenView alloc] init];
+        [self.view addSubview:loadingView];
+    }
+}
+
+- (void)addRightNavigationButton{
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+                                                                    style:UIBarButtonSystemItemDone 
+                                                                   target:self 
+                                                                   action:@selector(userDoneSelectingCoord)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    [rightButton release];
+}
 
 - (void)addSelectionPinWithCoordinate:(CLLocationCoordinate2D)aCoordinate{
     selectionPin = [[LocationPin alloc] initWithTitle:@"Selección" withCoordinate:aCoordinate];
@@ -56,12 +90,14 @@
 {
     [super viewDidLoad];
     
+    [self addRightNavigationButton];
+    
     //  Long Touch gesture recognizer
     UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] 
                                                        initWithTarget:self action:@selector(handleLongPress:)];
     gestureRecognizer.minimumPressDuration = 2.0;
     [mapView addGestureRecognizer:gestureRecognizer];
-    [gestureRecognizer release];    
+    [gestureRecognizer release];
 }
 
 - (void)viewDidUnload
@@ -86,7 +122,7 @@
 #pragma mark - LocationManagerDelegateProtocol
 -(void) locationUpdate:(CLLocation *)location{
     currentLocationPin = [[[LocationPin alloc] initWithTitle:@"VOS" 
-                                                    withCoordinate:location.coordinate] autorelease];
+                                              withCoordinate:location.coordinate] autorelease];
     [mapView addAnnotation:currentLocationPin];
     
     MKCoordinateSpan aCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005);
