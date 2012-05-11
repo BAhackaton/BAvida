@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "ServerAPIManager.h"
+#import "MapSelectionViewController.h"
 
 @interface ViewController ()
 
@@ -29,6 +31,15 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (IBAction)gpsButtonTapped:(id)sender {
+    [[ServerAPIManager sharedInstance] queryPointsWithCurrentLocation];
+}
+
+- (IBAction)lookOnMapButtonTapped:(id)sender {
+    MapSelectionViewController *aViewController = [[[MapSelectionViewController alloc] init] autorelease];
+    [self.navigationController pushViewController:aViewController animated:YES];
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ResultViewController.h
 //  HackatonBA
 //
 //  Created by Ezequiel Becerra on 5/11/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-- (IBAction)gpsButtonTapped:(id)sender;
-- (IBAction)lookOnMapButtonTapped:(id)sender;
+@interface ResultViewController : UIViewController
 
 @end
