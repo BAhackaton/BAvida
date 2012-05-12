@@ -9,10 +9,10 @@ def value_bike(bikestations):
     if qty > 0:
         min_dist = bikestations[0].distance
     else:
-        return 0
+        return 0 , 0
 
     #print str(min_dist) + " " + str(qty)
-    return int(100 / min_dist * qty)
+    return [int(100 / min_dist * qty), round(min_dist,2)]
     
 def value_noise(yearlynoises):
     qty = len(list(yearlynoises))
@@ -47,14 +47,14 @@ def getdata(request):
     bikestation = BikeStation.find_from_point(lat, lon, dis)
     yearlynoise = YearlyNoise.find_from_point(lat, lon, dis)
 
-    vbike = value_bike(bikestation)
+    vbike, min_dis = value_bike(bikestation)
     vnoise = value_noise(yearlynoise)
     
     #print vbike
     #print vnoise
     
     noise = Category(name = 'Ruido', desc = 'Hay mucho ruido?', value = vnoise, thumb = 'noise.png')
-    bikes = Category(name = 'Bicis', desc = 'Hay bicis por ahi?', value = vbike, thumb = 'bikes.png')
+    bikes = Category(name = 'Bicis', desc = 'La bicicleta mas cercana esta a: %s mts' % (min_dis*1000), value = vbike, thumb = 'bikes.png')
     
     
     categories = {
