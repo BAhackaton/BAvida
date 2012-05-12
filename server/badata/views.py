@@ -53,8 +53,12 @@ def getdata(request):
     #print vbike
     #print vnoise
     
-    noise = Category(name = 'Ruido', desc = 'Hay mucho ruido?', value = vnoise, thumb = 'noise.png')
-    bikes = Category(name = 'Bicis', desc = 'La bicicleta mas cercana esta a: %s mts' % (min_dis*1000), value = vbike, thumb = 'bikes.png')
+    # http://www.tweetworldapp.com.ar/temp/bicing.png
+    # http://www.tweetworldapp.com.ar/temp/sound.png
+    # http://www.tweetworldapp.com.ar/temp/park.png
+    
+    noise = Category(name = 'Ruido', desc = 'Hay mucho ruido?', value = vnoise, thumb = 'http://www.tweetworldapp.com.ar/temp/sound.png')
+    bikes = Category(name = 'Bicis', desc = 'La bicicleta mas cercana esta a: %s mts' % (min_dis*1000), value = vbike, thumb = 'http://www.tweetworldapp.com.ar/temp/bicing.png')
     
     
     categories = {
