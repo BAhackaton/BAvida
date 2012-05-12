@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		670DF93D155D483D00FD2D0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF93C155D483D00FD2D0B /* UIKit.framework */; };
+		670DF93F155D483D00FD2D0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF93E155D483D00FD2D0B /* Foundation.framework */; };
+		670DF941155D483D00FD2D0B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF940155D483D00FD2D0B /* CoreGraphics.framework */; };
+		670DF947155D483D00FD2D0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 670DF945155D483D00FD2D0B /* InfoPlist.strings */; };
+		670DF949155D483D00FD2D0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF948155D483D00FD2D0B /* main.m */; };
+		670DF94D155D483D00FD2D0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF94C155D483D00FD2D0B /* AppDelegate.m */; };
+		670DF950155D483D00FD2D0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF94F155D483D00FD2D0B /* ViewController.m */; };
+		670DF953155D483D00FD2D0B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670DF951155D483D00FD2D0B /* ViewController.xib */; };
+		670DF95C155D49BE00FD2D0B /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF95A155D49BE00FD2D0B /* ResultViewController.m */; };
+		670DF95D155D49BE00FD2D0B /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670DF95B155D49BE00FD2D0B /* ResultViewController.xib */; };
+		670DF960155D4E1600FD2D0B /* ServerAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF95F155D4E1600FD2D0B /* ServerAPIManager.m */; };
+		670DF964155D4F4F00FD2D0B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF963155D4F4F00FD2D0B /* CoreLocation.framework */; };
+		670DF984155D5D1600FD2D0B /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF96F155D5D1600FD2D0B /* ASIAuthenticationDialog.m */; };
+		670DF985155D5D1600FD2D0B /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF972155D5D1600FD2D0B /* ASIDataCompressor.m */; };
+		670DF986155D5D1600FD2D0B /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF974155D5D1600FD2D0B /* ASIDataDecompressor.m */; };
+		670DF987155D5D1600FD2D0B /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF976155D5D1600FD2D0B /* ASIDownloadCache.m */; };
+		670DF988155D5D1600FD2D0B /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF978155D5D1600FD2D0B /* ASIFormDataRequest.m */; };
+		670DF989155D5D1600FD2D0B /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF97A155D5D1600FD2D0B /* ASIHTTPRequest.m */; };
+		670DF98A155D5D1600FD2D0B /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF97E155D5D1600FD2D0B /* ASIInputStream.m */; };
+		670DF98B155D5D1600FD2D0B /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF980155D5D1600FD2D0B /* ASINetworkQueue.m */; };
+		670DF98C155D5D1600FD2D0B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DF983155D5D1600FD2D0B /* Reachability.m */; };
+		670DF98E155D621F00FD2D0B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF98D155D621F00FD2D0B /* CFNetwork.framework */; };
+		670DF990155D627100FD2D0B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF98F155D627100FD2D0B /* SystemConfiguration.framework */; };
+		670DF992155D628900FD2D0B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF991155D628900FD2D0B /* MobileCoreServices.framework */; };
+		670DF994155D62C700FD2D0B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 670DF993155D62C700FD2D0B /* libz.dylib */; };
+		6757000F155DB53C00A63567 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6757000E155DB53C00A63567 /* JSONKit.m */; };
+		67570014155DB93200A63567 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 67570013155DB93200A63567 /* response.json */; };
+		67E37C63155E9F58000EDC60 /* ResultCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E37C62155E9F58000EDC60 /* ResultCategoryView.m */; };
+		67E37C6A155EBB1C000EDC60 /* home_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E37C69155EBB1C000EDC60 /* home_background.png */; };
+		67E37C6E155EBC25000EDC60 /* gps_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E37C6C155EBC25000EDC60 /* gps_icon.png */; };
+		67E37C6F155EBC25000EDC60 /* map_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E37C6D155EBC25000EDC60 /* map_icon.png */; };
+		67E37C71155EBFF8000EDC60 /* dummy_category.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E37C70155EBFF8000EDC60 /* dummy_category.png */; };
+		67E37C7A155EC2F8000EDC60 /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E37C77155EC2F8000EDC60 /* ImageManager.m */; };
+		67E37C7B155EC2F8000EDC60 /* UIImageViewLazy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E37C79155EC2F8000EDC60 /* UIImageViewLazy.m */; };
+		67E37C7D155EE7D9000EDC60 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E37C7C155EE7D9000EDC60 /* Default.png */; };
+		67E37C7F155EE8CB000EDC60 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E37C7E155EE8CB000EDC60 /* icon.png */; };
+		67E37C83155EF1B6000EDC60 /* CategoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E37C81155EF1B5000EDC60 /* CategoryDetailViewController.m */; };
+		67E37C84155EF1B6000EDC60 /* CategoryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E37C82155EF1B5000EDC60 /* CategoryDetailViewController.xib */; };
+		67E37C86155EF6CC000EDC60 /* dummy_category_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E37C85155EF6CC000EDC60 /* dummy_category_big.png */; };
+		67FEA13D155D6B0A00218F75 /* MapSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA13B155D6B0A00218F75 /* MapSelectionViewController.m */; };
+		67FEA13E155D6B0A00218F75 /* MapSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FEA13C155D6B0A00218F75 /* MapSelectionViewController.xib */; };
+		67FEA141155D76F900218F75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FEA140155D76F900218F75 /* MapKit.framework */; };
+		67FEA144155D7C8300218F75 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA143155D7C8300218F75 /* LocationManager.m */; };
+		67FEA148155D909C00218F75 /* LocationPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA147155D909C00218F75 /* LocationPin.m */; };
+		67FEA153155D9F7E00218F75 /* LoadingScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEA152155D9F7E00218F75 /* LoadingScreenView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		670DF938155D483D00FD2D0B /* HackatonBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackatonBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		670DF93C155D483D00FD2D0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		670DF93E155D483D00FD2D0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		670DF940155D483D00FD2D0B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		670DF944155D483D00FD2D0B /* HackatonBA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HackatonBA-Info.plist"; sourceTree = "<group>"; };
+		670DF946155D483D00FD2D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		670DF948155D483D00FD2D0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		670DF94A155D483D00FD2D0B /* HackatonBA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HackatonBA-Prefix.pch"; sourceTree = "<group>"; };
+		670DF94B155D483D00FD2D0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		670DF94C155D483D00FD2D0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		670DF94E155D483D00FD2D0B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		670DF94F155D483D00FD2D0B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		670DF952155D483D00FD2D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		670DF959155D49BE00FD2D0B /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		670DF95A155D49BE00FD2D0B /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		670DF95B155D49BE00FD2D0B /* ResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		670DF95E155D4E1600FD2D0B /* ServerAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIManager.h; sourceTree = "<group>"; };
+		670DF95F155D4E1600FD2D0B /* ServerAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerAPIManager.m; sourceTree = "<group>"; };
+		670DF963155D4F4F00FD2D0B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		670DF96A155D514700FD2D0B /* SynthesizeSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		670DF96E155D5D1600FD2D0B /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		670DF96F155D5D1600FD2D0B /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		670DF970155D5D1600FD2D0B /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		670DF971155D5D1600FD2D0B /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		670DF972155D5D1600FD2D0B /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		670DF973155D5D1600FD2D0B /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		670DF974155D5D1600FD2D0B /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		670DF975155D5D1600FD2D0B /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		670DF976155D5D1600FD2D0B /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		670DF977155D5D1600FD2D0B /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		670DF978155D5D1600FD2D0B /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		670DF979155D5D1600FD2D0B /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		670DF97A155D5D1600FD2D0B /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		670DF97B155D5D1600FD2D0B /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		670DF97C155D5D1600FD2D0B /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		670DF97D155D5D1600FD2D0B /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		670DF97E155D5D1600FD2D0B /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		670DF97F155D5D1600FD2D0B /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		670DF980155D5D1600FD2D0B /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		670DF981155D5D1600FD2D0B /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		670DF982155D5D1600FD2D0B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		670DF983155D5D1600FD2D0B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		670DF98D155D621F00FD2D0B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		670DF98F155D627100FD2D0B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		670DF991155D628900FD2D0B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		670DF993155D62C700FD2D0B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6757000D155DB53C00A63567 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = libs/JSONKit/JSONKit.h; sourceTree = "<group>"; };
+		6757000E155DB53C00A63567 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = libs/JSONKit/JSONKit.m; sourceTree = "<group>"; };
+		67570013155DB93200A63567 /* response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = response.json; path = Resourses/response.json; sourceTree = "<group>"; };
+		67E37C61155E9F58000EDC60 /* ResultCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCategoryView.h; sourceTree = "<group>"; };
+		67E37C62155E9F58000EDC60 /* ResultCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultCategoryView.m; sourceTree = "<group>"; };
+		67E37C69155EBB1C000EDC60 /* home_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_background.png; sourceTree = "<group>"; };
+		67E37C6C155EBC25000EDC60 /* gps_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps_icon.png; sourceTree = "<group>"; };
+		67E37C6D155EBC25000EDC60 /* map_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_icon.png; sourceTree = "<group>"; };
+		67E37C70155EBFF8000EDC60 /* dummy_category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dummy_category.png; sourceTree = "<group>"; };
+		67E37C76155EC2F8000EDC60 /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
+		67E37C77155EC2F8000EDC60 /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
+		67E37C78155EC2F8000EDC60 /* UIImageViewLazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewLazy.h; sourceTree = "<group>"; };
+		67E37C79155EC2F8000EDC60 /* UIImageViewLazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewLazy.m; sourceTree = "<group>"; };
+		67E37C7C155EE7D9000EDC60 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		67E37C7E155EE8CB000EDC60 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		67E37C80155EF1B5000EDC60 /* CategoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDetailViewController.h; sourceTree = "<group>"; };
+		67E37C81155EF1B5000EDC60 /* CategoryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailViewController.m; sourceTree = "<group>"; };
+		67E37C82155EF1B5000EDC60 /* CategoryDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryDetailViewController.xib; sourceTree = "<group>"; };
+		67E37C85155EF6CC000EDC60 /* dummy_category_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dummy_category_big.png; sourceTree = "<group>"; };
+		67FEA13A155D6B0A00218F75 /* MapSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSelectionViewController.h; sourceTree = "<group>"; };
+		67FEA13B155D6B0A00218F75 /* MapSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSelectionViewController.m; sourceTree = "<group>"; };
+		67FEA13C155D6B0A00218F75 /* MapSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSelectionViewController.xib; sourceTree = "<group>"; };
+		67FEA140155D76F900218F75 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		67FEA142155D7C8300218F75 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		67FEA143155D7C8300218F75 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		67FEA145155D7F9000218F75 /* LocationManagerDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManagerDelegateProtocol.h; sourceTree = "<group>"; };
+		67FEA146155D909C00218F75 /* LocationPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPin.h; sourceTree = "<group>"; };
+		67FEA147155D909C00218F75 /* LocationPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPin.m; sourceTree = "<group>"; };
+		67FEA151155D9F7E00218F75 /* LoadingScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreenView.h; sourceTree = "<group>"; };
+		67FEA152155D9F7E00218F75 /* LoadingScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScreenView.m; sourceTree = "<group>"; };
+		67FEA158155DB1E700218F75 /* ServerAPIDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerAPIDelegateProtocol.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		670DF935155D483D00FD2D0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FEA141155D76F900218F75 /* MapKit.framework in Frameworks */,
+				670DF994155D62C700FD2D0B /* libz.dylib in Frameworks */,
+				670DF992155D628900FD2D0B /* MobileCoreServices.framework in Frameworks */,
+				670DF990155D627100FD2D0B /* SystemConfiguration.framework in Frameworks */,
+				670DF98E155D621F00FD2D0B /* CFNetwork.framework in Frameworks */,
+				670DF964155D4F4F00FD2D0B /* CoreLocation.framework in Frameworks */,
+				670DF93D155D483D00FD2D0B /* UIKit.framework in Frameworks */,
+				670DF93F155D483D00FD2D0B /* Foundation.framework in Frameworks */,
+				670DF941155D483D00FD2D0B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		670DF92D155D483D00FD2D0B = {
+			isa = PBXGroup;
+			children = (
+				67E37C7E155EE8CB000EDC60 /* icon.png */,
+				67E37C7C155EE7D9000EDC60 /* Default.png */,
+				670DF942155D483D00FD2D0B /* HackatonBA */,
+				670DF93B155D483D00FD2D0B /* Frameworks */,
+				670DF939155D483D00FD2D0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		670DF939155D483D00FD2D0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				670DF938155D483D00FD2D0B /* HackatonBA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		670DF93B155D483D00FD2D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				670DF993155D62C700FD2D0B /* libz.dylib */,
+				67FEA140155D76F900218F75 /* MapKit.framework */,
+				670DF991155D628900FD2D0B /* MobileCoreServices.framework */,
+				670DF98F155D627100FD2D0B /* SystemConfiguration.framework */,
+				670DF98D155D621F00FD2D0B /* CFNetwork.framework */,
+				670DF963155D4F4F00FD2D0B /* CoreLocation.framework */,
+				670DF93C155D483D00FD2D0B /* UIKit.framework */,
+				670DF93E155D483D00FD2D0B /* Foundation.framework */,
+				670DF940155D483D00FD2D0B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		670DF942155D483D00FD2D0B /* HackatonBA */ = {
+			isa = PBXGroup;
+			children = (
+				67FEA149155D93BF00218F75 /* Entities */,
+				670DF96B155D5CFB00FD2D0B /* libs */,
+				670DF962155D4F0300FD2D0B /* Logic */,
+				670DF961155D4EF700FD2D0B /* Controller */,
+				67E37C5F155E9F02000EDC60 /* Views */,
+				670DF94B155D483D00FD2D0B /* AppDelegate.h */,
+				670DF94C155D483D00FD2D0B /* AppDelegate.m */,
+				670DF96A155D514700FD2D0B /* SynthesizeSingleton.h */,
+				67570012155DB92000A63567 /* Resources */,
+				670DF943155D483D00FD2D0B /* Supporting Files */,
+			);
+			path = HackatonBA;
+			sourceTree = "<group>";
+		};
+		670DF943155D483D00FD2D0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				670DF944155D483D00FD2D0B /* HackatonBA-Info.plist */,
+				670DF945155D483D00FD2D0B /* InfoPlist.strings */,
+				670DF948155D483D00FD2D0B /* main.m */,
+				670DF94A155D483D00FD2D0B /* HackatonBA-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		670DF961155D4EF700FD2D0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				670DF94E155D483D00FD2D0B /* ViewController.h */,
+				670DF94F155D483D00FD2D0B /* ViewController.m */,
+				670DF951155D483D00FD2D0B /* ViewController.xib */,
+				670DF959155D49BE00FD2D0B /* ResultViewController.h */,
+				670DF95A155D49BE00FD2D0B /* ResultViewController.m */,
+				670DF95B155D49BE00FD2D0B /* ResultViewController.xib */,
+				67FEA13A155D6B0A00218F75 /* MapSelectionViewController.h */,
+				67FEA13B155D6B0A00218F75 /* MapSelectionViewController.m */,
+				67FEA13C155D6B0A00218F75 /* MapSelectionViewController.xib */,
+				67E37C80155EF1B5000EDC60 /* CategoryDetailViewController.h */,
+				67E37C81155EF1B5000EDC60 /* CategoryDetailViewController.m */,
+				67E37C82155EF1B5000EDC60 /* CategoryDetailViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		670DF962155D4F0300FD2D0B /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				67E37C76155EC2F8000EDC60 /* ImageManager.h */,
+				67E37C77155EC2F8000EDC60 /* ImageManager.m */,
+				670DF95E155D4E1600FD2D0B /* ServerAPIManager.h */,
+				670DF95F155D4E1600FD2D0B /* ServerAPIManager.m */,
+				67FEA158155DB1E700218F75 /* ServerAPIDelegateProtocol.h */,
+				67FEA142155D7C8300218F75 /* LocationManager.h */,
+				67FEA143155D7C8300218F75 /* LocationManager.m */,
+				67FEA145155D7F9000218F75 /* LocationManagerDelegateProtocol.h */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		670DF96B155D5CFB00FD2D0B /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				6757000B155DB52E00A63567 /* JSONKit */,
+				670DF96D155D5D1600FD2D0B /* ASIHTTPRequest */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		670DF96D155D5D1600FD2D0B /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				670DF96E155D5D1600FD2D0B /* ASIAuthenticationDialog.h */,
+				670DF96F155D5D1600FD2D0B /* ASIAuthenticationDialog.m */,
+				670DF970155D5D1600FD2D0B /* ASICacheDelegate.h */,
+				670DF971155D5D1600FD2D0B /* ASIDataCompressor.h */,
+				670DF972155D5D1600FD2D0B /* ASIDataCompressor.m */,
+				670DF973155D5D1600FD2D0B /* ASIDataDecompressor.h */,
+				670DF974155D5D1600FD2D0B /* ASIDataDecompressor.m */,
+				670DF975155D5D1600FD2D0B /* ASIDownloadCache.h */,
+				670DF976155D5D1600FD2D0B /* ASIDownloadCache.m */,
+				670DF977155D5D1600FD2D0B /* ASIFormDataRequest.h */,
+				670DF978155D5D1600FD2D0B /* ASIFormDataRequest.m */,
+				670DF979155D5D1600FD2D0B /* ASIHTTPRequest.h */,
+				670DF97A155D5D1600FD2D0B /* ASIHTTPRequest.m */,
+				670DF97B155D5D1600FD2D0B /* ASIHTTPRequestConfig.h */,
+				670DF97C155D5D1600FD2D0B /* ASIHTTPRequestDelegate.h */,
+				670DF97D155D5D1600FD2D0B /* ASIInputStream.h */,
+				670DF97E155D5D1600FD2D0B /* ASIInputStream.m */,
+				670DF97F155D5D1600FD2D0B /* ASINetworkQueue.h */,
+				670DF980155D5D1600FD2D0B /* ASINetworkQueue.m */,
+				670DF981155D5D1600FD2D0B /* ASIProgressDelegate.h */,
+				670DF982155D5D1600FD2D0B /* Reachability.h */,
+				670DF983155D5D1600FD2D0B /* Reachability.m */,
+			);
+			name = ASIHTTPRequest;
+			path = libs/ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		6757000B155DB52E00A63567 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				6757000D155DB53C00A63567 /* JSONKit.h */,
+				6757000E155DB53C00A63567 /* JSONKit.m */,
+			);
+			name = JSONKit;
+			sourceTree = "<group>";
+		};
+		67570012155DB92000A63567 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67570013155DB93200A63567 /* response.json */,
+				67E37C68155EBB1C000EDC60 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		67E37C5F155E9F02000EDC60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67E37C78155EC2F8000EDC60 /* UIImageViewLazy.h */,
+				67E37C79155EC2F8000EDC60 /* UIImageViewLazy.m */,
+				67FEA151155D9F7E00218F75 /* LoadingScreenView.h */,
+				67FEA152155D9F7E00218F75 /* LoadingScreenView.m */,
+				67E37C61155E9F58000EDC60 /* ResultCategoryView.h */,
+				67E37C62155E9F58000EDC60 /* ResultCategoryView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		67E37C68155EBB1C000EDC60 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				67E37C6C155EBC25000EDC60 /* gps_icon.png */,
+				67E37C6D155EBC25000EDC60 /* map_icon.png */,
+				67E37C70155EBFF8000EDC60 /* dummy_category.png */,
+				67E37C85155EF6CC000EDC60 /* dummy_category_big.png */,
+				67E37C69155EBB1C000EDC60 /* home_background.png */,
+			);
+			name = Images;
+			path = Resourses/Images;
+			sourceTree = "<group>";
+		};
+		67FEA149155D93BF00218F75 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				67FEA146155D909C00218F75 /* LocationPin.h */,
+				67FEA147155D909C00218F75 /* LocationPin.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		670DF937155D483D00FD2D0B /* HackatonBA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670DF956155D483D00FD2D0B /* Build configuration list for PBXNativeTarget "HackatonBA" */;
+			buildPhases = (
+				670DF934155D483D00FD2D0B /* Sources */,
+				670DF935155D483D00FD2D0B /* Frameworks */,
+				670DF936155D483D00FD2D0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackatonBA;
+			productName = HackatonBA;
+			productReference = 670DF938155D483D00FD2D0B /* HackatonBA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		670DF92F155D483D00FD2D0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 670DF932155D483D00FD2D0B /* Build configuration list for PBXProject "HackatonBA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 670DF92D155D483D00FD2D0B;
+			productRefGroup = 670DF939155D483D00FD2D0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				670DF937155D483D00FD2D0B /* HackatonBA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		670DF936155D483D00FD2D0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670DF947155D483D00FD2D0B /* InfoPlist.strings in Resources */,
+				670DF953155D483D00FD2D0B /* ViewController.xib in Resources */,
+				670DF95D155D49BE00FD2D0B /* ResultViewController.xib in Resources */,
+				67FEA13E155D6B0A00218F75 /* MapSelectionViewController.xib in Resources */,
+				67570014155DB93200A63567 /* response.json in Resources */,
+				67E37C6A155EBB1C000EDC60 /* home_background.png in Resources */,
+				67E37C6E155EBC25000EDC60 /* gps_icon.png in Resources */,
+				67E37C6F155EBC25000EDC60 /* map_icon.png in Resources */,
+				67E37C71155EBFF8000EDC60 /* dummy_category.png in Resources */,
+				67E37C7D155EE7D9000EDC60 /* Default.png in Resources */,
+				67E37C7F155EE8CB000EDC60 /* icon.png in Resources */,
+				67E37C84155EF1B6000EDC60 /* CategoryDetailViewController.xib in Resources */,
+				67E37C86155EF6CC000EDC60 /* dummy_category_big.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		670DF934155D483D00FD2D0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670DF949155D483D00FD2D0B /* main.m in Sources */,
+				670DF94D155D483D00FD2D0B /* AppDelegate.m in Sources */,
+				670DF950155D483D00FD2D0B /* ViewController.m in Sources */,
+				670DF95C155D49BE00FD2D0B /* ResultViewController.m in Sources */,
+				670DF960155D4E1600FD2D0B /* ServerAPIManager.m in Sources */,
+				670DF984155D5D1600FD2D0B /* ASIAuthenticationDialog.m in Sources */,
+				670DF985155D5D1600FD2D0B /* ASIDataCompressor.m in Sources */,
+				670DF986155D5D1600FD2D0B /* ASIDataDecompressor.m in Sources */,
+				670DF987155D5D1600FD2D0B /* ASIDownloadCache.m in Sources */,
+				670DF988155D5D1600FD2D0B /* ASIFormDataRequest.m in Sources */,
+				670DF989155D5D1600FD2D0B /* ASIHTTPRequest.m in Sources */,
+				670DF98A155D5D1600FD2D0B /* ASIInputStream.m in Sources */,
+				670DF98B155D5D1600FD2D0B /* ASINetworkQueue.m in Sources */,
+				670DF98C155D5D1600FD2D0B /* Reachability.m in Sources */,
+				67FEA13D155D6B0A00218F75 /* MapSelectionViewController.m in Sources */,
+				67FEA144155D7C8300218F75 /* LocationManager.m in Sources */,
+				67FEA148155D909C00218F75 /* LocationPin.m in Sources */,
+				67FEA153155D9F7E00218F75 /* LoadingScreenView.m in Sources */,
+				6757000F155DB53C00A63567 /* JSONKit.m in Sources */,
+				67E37C63155E9F58000EDC60 /* ResultCategoryView.m in Sources */,
+				67E37C7A155EC2F8000EDC60 /* ImageManager.m in Sources */,
+				67E37C7B155EC2F8000EDC60 /* UIImageViewLazy.m in Sources */,
+				67E37C83155EF1B6000EDC60 /* CategoryDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		670DF945155D483D00FD2D0B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				670DF946155D483D00FD2D0B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		670DF951155D483D00FD2D0B /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				670DF952155D483D00FD2D0B /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		670DF954155D483D00FD2D0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		670DF955155D483D00FD2D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		670DF957155D483D00FD2D0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HackatonBA/HackatonBA-Prefix.pch";
+				INFOPLIST_FILE = "HackatonBA/HackatonBA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		670DF958155D483D00FD2D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HackatonBA/HackatonBA-Prefix.pch";
+				INFOPLIST_FILE = "HackatonBA/HackatonBA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		670DF932155D483D00FD2D0B /* Build configuration list for PBXProject "HackatonBA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670DF954155D483D00FD2D0B /* Debug */,
+				670DF955155D483D00FD2D0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		670DF956155D483D00FD2D0B /* Build configuration list for PBXNativeTarget "HackatonBA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670DF957155D483D00FD2D0B /* Debug */,
+				670DF958155D483D00FD2D0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 670DF92F155D483D00FD2D0B /* Project object */;
+}

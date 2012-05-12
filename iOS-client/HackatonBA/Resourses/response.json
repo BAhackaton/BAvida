@@ -1,0 +1,52 @@
+{
+    "categories": {
+        "noise": {
+            "name": "Ruido",
+            "desc": "foo",
+            "value": 50,
+            "thumb": "http://www.tweetworldapp.com.ar/temp/test_category.png"
+        },
+        "air": {
+            "name": "Aire",
+            "desc": "foo",
+            "value": 50,
+            "thumb": "http://www.tweetworldapp.com.ar/temp/test_category.png"
+        },
+        "1": {
+            "name": "Ruido",
+            "desc": "foo",
+            "value": 50,
+            "thumb": "http://www.tweetworldapp.com.ar/temp/test_category.png"
+        },
+        "2": {
+            "name": "Aire",
+            "desc": "foo",
+            "value": 50,
+            "thumb": "http://www.tweetworldapp.com.ar/temp/test_category.png"
+        },
+        "3": {
+            "name": "Ruido",
+            "desc": "foo",
+            "value": 50,
+            "thumb": "http://www.tweetworldapp.com.ar/temp/test_category.png"
+        },
+        "4": {
+            "name": "Aire",
+            "desc": "foo",
+            "value": 50,
+            "thumb": "http://www.tweetworldapp.com.ar/temp/test_category.png"
+        },
+        "5": {
+            "name": "Ruido",
+            "desc": "foo",
+            "value": 50,
+            "thumb": "http://www.tweetworldapp.com.ar/temp/test_category.png"
+        },
+        "6": {
+            "name": "Aire",
+            "desc": "foo",
+            "value": 50,
+            "thumb": "http://www.tweetworldapp.com.ar/temp/test_category.png"
+        }        
+    }
+}
