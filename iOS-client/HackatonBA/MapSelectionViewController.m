@@ -65,6 +65,19 @@
     }    
 }
 
+- (void)addLocationPinWithCoordinate:(CLLocationCoordinate2D)aCoordinate{
+    currentLocationPin = [[LocationPin alloc] initWithTitle:@"VOS" withCoordinate:aCoordinate];
+    [mapView addAnnotation:currentLocationPin];
+    [currentLocationPin release];
+}
+
+- (void)removeLocationPin{
+    if (currentLocationPin != nil){
+        [mapView removeAnnotation:currentLocationPin];
+        currentLocationPin = nil;
+    }
+}
+
 - (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer{
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan){
         [self removeSelectionPin];
@@ -126,10 +139,9 @@
 
 #pragma mark - LocationManagerDelegateProtocol
 -(void) locationUpdate:(CLLocation *)location{
-    currentLocationPin = [[[LocationPin alloc] initWithTitle:@"VOS" 
-                                              withCoordinate:location.coordinate] autorelease];
-    [mapView addAnnotation:currentLocationPin];
-    
+    [self removeLocationPin];
+    [self addLocationPinWithCoordinate:location.coordinate];
+        
     MKCoordinateSpan aCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005);
     MKCoordinateRegion aCoordinateRegion = MKCoordinateRegionMake(location.coordinate, aCoordinateSpan);
     [mapView setRegion:aCoordinateRegion animated:YES];
