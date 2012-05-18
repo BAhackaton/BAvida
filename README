@@ -1,0 +1,15 @@
+BAVida es una aplicación para iOS que calcula la calidad de vida de una zona dentro de la Ciudad de Buenos Aires, utilizando datos liberados por http://data.buenosaires.gob.ar 
+
+En este momento el servidor utiliza los datos de:
+> Medio Ambiente: Contaminación de Ruido - http://data.buenosaires.gob.ar/dataset/niveles-contaminacion-ruido
+> Transporte y Movilidad: Estaciones de Bicicletas Públicas - http://data.buenosaires.gob.ar/dataset/bicicletas-publicas
+
+Más información relacionada en http://www.betzerra.com.ar/tag/bavida/
+
+Desarrolladores:
+> Gabriel Stock (@gstock)
+> Ezequiel Becerra (@betzerra)
+
+DEV NOTES:
+Dentro del método -(void)queryPointsWithLocationCoordinate:(CLLocationCoordinate2D)aLocation hay una URL que hay que cambiar con la url del servidor (en futuras versiones voy a hacer esto configurable por settings)
+
