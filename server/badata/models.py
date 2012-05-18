@@ -66,6 +66,12 @@ class BikeStation(GeoModel):
     create_dated = models.CharField(max_length=25)  
     #lat = models.CharField(max_length=25)           
     #lon = models.CharField(max_length=25)
+
+class Park(GeoModel):
+    name = models.CharField(max_length=100)
+    category = models.CharField(max_length=50)
+    area = models.FloatField()
+
     
 class Category:
     
