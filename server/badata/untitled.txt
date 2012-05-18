@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>centroides</name>
+<Schema name="centroides" id="centroides">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="ESPACIO1" type="string"></SimpleField>
+	<SimpleField name="TIPO" type="string"></SimpleField>
+	<SimpleField name="TIPOMIN" type="string"></SimpleField>
+	<SimpleField name="NOM_ORIGIN" type="string"></SimpleField>
+	<SimpleField name="NOMBRE" type="string"></SimpleField>
+	<SimpleField name="NOMPLCPU" type="string"></SimpleField>
+	<SimpleField name="DECRETO" type="string"></SimpleField>
+	<SimpleField name="ORDENAZA" type="string"></SimpleField>
+	<SimpleField name="BOLETIN" type="string"></SimpleField>
+	<SimpleField name="FECHA_DECR" type="string"></SimpleField>
+	<SimpleField name="FECHA_ORDE" type="string"></SimpleField>
+	<SimpleField name="FECHA_BOLE" type="string"></SimpleField>
+	<SimpleField name="FUENTE" type="string"></SimpleField>
+	<SimpleField name="OBSERVACIO" type="string"></SimpleField>
+	<SimpleField name="SECCION" type="float"></SimpleField>
+	<SimpleField name="AREA" type="float"></SimpleField>
+	<SimpleField name="PERIMETER" type="float"></SimpleField>
+	<SimpleField name="ACRES" type="float"></SimpleField>
+	<SimpleField name="HECTARES" type="float"></SimpleField>
+</Schema>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#centroides">
+		<SimpleData name="ESPACIO1">PLAZOLETA</SimpleData>
+		<SimpleData name="TIPO">PLAZOLETA SIN DENOMI</SimpleData>
+		<SimpleData name="TIPOMIN">Plazoleta Si</SimpleData>
+		<SimpleData name="NOM_ORIGIN">CLUB ATLETICO VELEZ SARFIELD</SimpleData>
+		<SimpleData name="NOMBRE">Club Atl. Velez Sarfield</SimpleData>
+		<SimpleData name="NOMPLCPU">Plazoleta Sin Denominacion Club Atl.</SimpleData>
+		<SimpleData name="DECRETO"></SimpleData>
+		<SimpleData name="ORDENAZA"></SimpleData>
+		<SimpleData name="BOLETIN"></SimpleData>
+		<SimpleData name="FECHA_DECR"></SimpleData>
+		<SimpleData name="FECHA_ORDE"></SimpleData>
+		<SimpleData name="FECHA_BOLE"></SimpleData>
+		<SimpleData name="FUENTE"></SimpleData>
+		<SimpleData name="OBSERVACIO">NO UP</SimpleData>
+		<SimpleData name="SECCION">0</SimpleData>
+		<SimpleData name="AREA">5488.438</SimpleData>
+		<SimpleData name="PERIMETER">943.412</SimpleData>
+		<SimpleData name="ACRES">1.356</SimpleData>
+		<SimpleData name="HECTARES">0.549</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-58.5147206638092,-34.634147492940883</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#centroides">
+		<SimpleData name="ESPACIO1"></SimpleData>
+		<SimpleData name="TIPO"></SimpleData>
+		<SimpleData name="TIPOMIN"></SimpleData>
+		<SimpleData name="NOM_ORIGIN">CLUB ATLETICO VELEZ SARFIELD</SimpleData>
+		<SimpleData name="NOMBRE">Club Atl. Velez Sarfield</SimpleData>
+		<SimpleData name="NOMPLCPU">Club Atl. Velez Sarfield</SimpleData>
+		<SimpleData name="DECRETO"></SimpleData>
+		<SimpleData name="ORDENAZA"></SimpleData>
+		<SimpleData name="BOLETIN"></SimpleData>
+		<SimpleData name="FECHA_DECR"></SimpleData>
+		<SimpleData name="FECHA_ORDE"></SimpleData>
+		<SimpleData name="FECHA_BOLE"></SimpleData>
+		<SimpleData name="FUENTE"></SimpleData>
+		<SimpleData name="OBSERVACIO">NO UP</SimpleData>
+		<SimpleData name="SECCION">0</SimpleData>
+		<SimpleData name="AREA">33.695</SimpleData>
+		<SimpleData name="PERIMETER">45.872</SimpleData>
+		<SimpleData name="ACRES">0.008</SimpleData>
+		<SimpleData name="HECTARES">0.003</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-58.51046371387897,-34.635272937202892</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#centroides">
+		<SimpleData name="ESPACIO1"></SimpleData>
+		<SimpleData name="TIPO"></SimpleData>
+		<SimpleData name="TIPOMIN"></SimpleData>
+		<SimpleData name="NOM_ORIGIN">CLUB ATLETICO VELEZ SARFIELD</SimpleData>
+		<SimpleData name="NOMBRE">Club Atl. Velez Sarfield</SimpleData>
+		<SimpleData name="NOMPLCPU">Club Atl. Velez Sarfield</SimpleData>
+		<SimpleData name="DECRETO"></SimpleData>
+		<SimpleData name="ORDENAZA"></SimpleData>
+		<SimpleData name="BOLETIN"></SimpleData>
+		<SimpleData name="FECHA_DECR"></SimpleData>
+		<SimpleData name="FECHA_ORDE"></SimpleData>
+		<SimpleData name="FECHA_BOLE"></SimpleData>
+		<SimpleData name="FUENTE"></SimpleData>
+		<SimpleData name="OBSERVACIO">NO UP</SimpleData>
+		<SimpleData name="SECCION">0</SimpleData>
+		<SimpleData name="AREA">189.554</SimpleData>
+		<SimpleData name="PERIMETER">66.591</SimpleData>
+		<SimpleData name="ACRES">0.047</SimpleData>
+		<SimpleData name="HECTARES">0.019</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-58.520369097487134,-34.635046516002745</coordinates></Point>
+  </Placemark>

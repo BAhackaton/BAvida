@@ -38,7 +38,34 @@ def value_noise(yearlynoises):
         value = 100
 
     return value * -1
+
+def value_park(parks):
+    qty = len(list(parks))
+    if qty > 0:
+        min_dist = parks[0].distance
+                
+        parklist = ['','','']        
+        i = 0
+        
+        for park in parks:
+            parkname = park.category + ' ' + park.name
+            
+            if i == 3:
+                break
+            elif i == 0:
+                parklist[i] = parkname
+                i += 1
+            elif parklist[i-1] != parkname and parklist[i-2] != parkname:
+                parklist[i] = parkname
+                i += 1
+                
+        
+        parknames = parklist[0] + ', ' + parklist[1] + ', ' + parklist[2]
+        
+    else:
+        return 0
     
+    return [int(100 / min_dist * qty), parknames]
 
 def getdata(request):
     lat = float(request.GET['lat'])
@@ -46,24 +73,20 @@ def getdata(request):
     dis = float(request.GET['dis'])
     bikestation = BikeStation.find_from_point(lat, lon, dis)
     yearlynoise = YearlyNoise.find_from_point(lat, lon, dis)
+    parks = Park.find_from_point(lat, lon, dis)
 
     vbike, min_dis = value_bike(bikestation)
     vnoise = value_noise(yearlynoise)
-    
-    #print vbike
-    #print vnoise
-    
-    # http://www.tweetworldapp.com.ar/temp/bicing.png
-    # http://www.tweetworldapp.com.ar/temp/sound.png
-    # http://www.tweetworldapp.com.ar/temp/park.png
+    vpark, nearparks = value_park(parks)
     
     noise = Category(name = 'Ruido', desc = 'Hay mucho ruido?', value = vnoise, thumb = 'http://www.tweetworldapp.com.ar/temp/sound.png')
     bikes = Category(name = 'Bicis', desc = 'La bicicleta mas cercana esta a: %s mts' % (min_dis*1000), value = vbike, thumb = 'http://www.tweetworldapp.com.ar/temp/bicing.png')
-    
+    parks = Category(name = 'Parques', desc = 'Parques cercanos: %s' % nearparks, value = vpark, thumb = 'http://www.tweetworldapp.com.ar/temp/park.png')
     
     categories = {
         'noise' : noise.__dict__,
-        'bikes' : bikes.__dict__    
+        'bikes' : bikes.__dict__,
+        'parks' : parks.__dict__  
     }
 
     response = {'categories' : categories}
